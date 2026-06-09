@@ -1,0 +1,2 @@
+class SkillPromoter:
+    pass

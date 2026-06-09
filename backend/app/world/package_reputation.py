@@ -1,0 +1,2 @@
+class PackageReputation:
+    pass

@@ -1,0 +1,2 @@
+class IdentityMapper:
+    pass

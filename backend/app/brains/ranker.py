@@ -1,0 +1,2 @@
+class RankerBrain:
+    pass

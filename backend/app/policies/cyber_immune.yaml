@@ -1,0 +1,22 @@
+cyber_immune:
+  enabled: true
+  default_external_content_zone: quarantine
+  require_scan_before_install: true
+  require_telegram_validation_for_new_packages: true
+  block_unknown_install_scripts: true
+  block_global_installs: true
+  block_secret_access: true
+
+  trust_thresholds:
+    allow_read_only_reference: 7.0
+    allow_sandbox_install: 8.0
+    require_validation_below: 8.5
+    block_below: 5.0
+
+  package_rules:
+    npm_ignore_scripts_default: true
+    pip_virtualenv_only: true
+    allow_source_distribution: false
+    allow_global_install: false
+    require_lockfile_diff: true
+    require_sbom_for_activation: true

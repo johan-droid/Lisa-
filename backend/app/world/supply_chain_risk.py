@@ -1,0 +1,2 @@
+class SupplyChainRisk:
+    pass

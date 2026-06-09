@@ -1,0 +1,2 @@
+class MessageNormalizer:
+    pass

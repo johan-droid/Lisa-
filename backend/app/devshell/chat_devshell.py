@@ -1,0 +1,2 @@
+class ChatDevShell:
+    pass

@@ -1,0 +1,2 @@
+class SlackAdapter:
+    pass

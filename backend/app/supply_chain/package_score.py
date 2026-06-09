@@ -1,0 +1,2 @@
+class PackageScore:
+    pass

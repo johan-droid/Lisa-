@@ -1,0 +1,2 @@
+class QuarantinePolicy:
+    pass

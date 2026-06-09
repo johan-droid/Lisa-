@@ -1,0 +1,2 @@
+class TrustScore:
+    pass

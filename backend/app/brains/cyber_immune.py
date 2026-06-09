@@ -1,0 +1,2 @@
+class CyberImmuneBrain:
+    pass

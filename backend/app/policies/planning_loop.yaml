@@ -1,0 +1,8 @@
+planning_loop:
+  max_iterations: 4
+  minimum_final_score: 8.0
+  minimum_feasibility_score: 7.5
+  maximum_risk_score: 6.0
+  stagnation_limit: 2
+  max_tokens_per_iteration: 12000
+  max_total_tokens_per_task: 50000
