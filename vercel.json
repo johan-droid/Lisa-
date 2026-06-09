@@ -7,13 +7,39 @@
       "destination": "/site/index.html"
     },
     {
-      "source": "/((?!site/).*)",
+      "source": "/styles.css",
+      "destination": "/site/styles.css"
+    },
+    {
+      "source": "/script.js",
+      "destination": "/site/script.js"
+    },
+    {
+      "source": "/((?!site/|styles.css|script.js).*)",
       "destination": "/site/index.html"
     }
   ],
   "headers": [
     {
       "source": "/site/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/styles.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/script.js",
       "headers": [
         {
           "key": "Cache-Control",
