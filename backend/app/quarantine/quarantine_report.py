@@ -1,0 +1,2 @@
+class QuarantineReport:
+    pass

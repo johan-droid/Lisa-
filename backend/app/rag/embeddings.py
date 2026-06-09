@@ -1,0 +1,2 @@
+class Embeddings:
+    pass

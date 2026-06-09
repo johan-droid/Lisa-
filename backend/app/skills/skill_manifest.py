@@ -1,0 +1,2 @@
+class SkillManifest:
+    pass

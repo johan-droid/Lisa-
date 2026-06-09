@@ -1,0 +1,7 @@
+permissions:
+  P0: observe
+  P1: draft
+  P2: sandbox_write
+  P3: external_write
+  P4: production_write
+  P5: irreversible_or_sensitive

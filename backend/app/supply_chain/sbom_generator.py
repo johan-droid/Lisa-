@@ -1,0 +1,2 @@
+class SbomGenerator:
+    pass

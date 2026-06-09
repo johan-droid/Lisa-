@@ -1,0 +1,2 @@
+class MistakeMiner:
+    pass

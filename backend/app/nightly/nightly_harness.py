@@ -1,0 +1,2 @@
+class NightlyHarness:
+    pass

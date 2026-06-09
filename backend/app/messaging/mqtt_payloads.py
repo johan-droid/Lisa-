@@ -1,0 +1,2 @@
+class MqttPayloads:
+    pass

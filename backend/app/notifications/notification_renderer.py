@@ -1,0 +1,2 @@
+class NotificationRenderer:
+    pass

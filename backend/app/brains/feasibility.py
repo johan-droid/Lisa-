@@ -1,0 +1,2 @@
+class FeasibilityBrain:
+    pass

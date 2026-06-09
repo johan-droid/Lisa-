@@ -1,0 +1,2 @@
+class FileTree:
+    pass

@@ -1,0 +1,2 @@
+class ReactLoop:
+    pass

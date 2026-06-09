@@ -1,0 +1,2 @@
+class SkillGraph:
+    pass

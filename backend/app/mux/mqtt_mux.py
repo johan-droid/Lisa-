@@ -1,0 +1,2 @@
+class MqttMux:
+    pass
