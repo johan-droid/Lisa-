@@ -12,7 +12,7 @@ Lisa is not a normal web dashboard. Lisa is an agentic operating core with contr
 
 Lisa is designed as a long-term personal agentic assistant with:
 
-- A controlled three-brain ReAct planning loop.
+- A controlled three-brain ReAct planning loop (part of a 7-brain governance system).
 - A Universal Plan Tokenizer to reduce token pressure between brains.
 - A strict Policy OS and constitution.
 - A chat-controlled DevShell for sandboxed self-improvement.
@@ -127,25 +127,28 @@ flowchart TD
 
 ---
 
-## Brain System
+## Lisa Brain System
 
-Lisa starts with three active planning brains:
+Lisa’s planning core starts with Planner, Feasibility, and Ranker.
+Lisa’s full governance, learning, safety, and audit architecture has 7 brains.
 
-| Brain | Role |
+| Brain | Core Responsibility |
 |---|---|
-| Planner Brain | Creates structured task plans. |
-| Feasibility Brain | Checks realism, missing access, infra limits, and safety. |
-| Ranker Brain | Scores plan quality and decides whether replanning is required. |
+| **1. Planner** | Turns a user goal into a structured, step-by-step implementation plan. |
+| **2. Feasibility** | Checks whether the plan is realistic, safe, and executable. |
+| **3. Ranker** | Scores the plan and decides whether the planning loop should re-run. |
+| **4. Teacher / Learner** | Runs Night School, studies traces, and proposes improvements. |
+| **5. Cyber-Immune** | Interacts with the world safely and scans MCPs/packages. |
+| **6. Red Team Mirror** | Adversarial safety review and critique of risky plans. |
+| **7. Auditor** | Evaluates the learning system, grades brains, and tracks learning curves. |
 
-Later brains:
+For detailed internals, see:
+- [Chat-Native Architecture](docs/01_chat_native_architecture.md)
+- [ReAct Planning Loop](docs/02_react_planning_loop.md)
+- [Teacher / Learner Brain](docs/13_teacher_learner_brain.md)
+- [Cyber-Immune Brain](docs/14_cyber_immune_brain.md)
+- [Auditor / School Inspector Brain](docs/15_auditor_school_inspector_brain.md)
 
-| Brain | Role |
-|---|---|
-| Learner Brain | Learns from traces, failures, and test results. |
-| Research / Cyber-Immune Brain | Tracks tools, MCPs, papers, risks, and external ecosystem changes. |
-| Red Team Mirror | Reviews risky actions for abuse paths and blast radius. |
-
----
 
 ## Mandatory Telegram Transparency
 
