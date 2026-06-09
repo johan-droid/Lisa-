@@ -1,0 +1,2 @@
+class ReportCard:
+    pass

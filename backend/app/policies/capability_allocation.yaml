@@ -1,0 +1,15 @@
+capability_allocation:
+  enabled: true
+  require_cyber_immune_scan: true
+  require_policy_decision: true
+  require_sandbox_eval: true
+  require_telegram_validation_for_activation: true
+  lease_based_capabilities: true
+
+  default_decision: recommend_only
+
+  capability_lease:
+    max_duration_hours: 24
+    requires_task_scope: true
+    requires_brain_scope: true
+    revocable: true

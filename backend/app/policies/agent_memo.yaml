@@ -1,0 +1,17 @@
+agent_memo:
+  enabled: true
+  append_only_by_default: true
+  allow_overwrite: false
+  require_policy_check: true
+  require_telegram_validation_for_trusted_promotion: true
+
+  records:
+    night_school_session: true
+    brain_report_card: true
+    marksheet: true
+    skill_replacement: true
+    skill_retirement: true
+    capability_recommendation: true
+    package_recommendation: true
+    mcp_recommendation: true
+    teacher_effectiveness: true

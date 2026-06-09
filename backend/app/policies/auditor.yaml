@@ -1,0 +1,29 @@
+auditor_brain:
+  enabled: true
+
+  can_teach_directly: false
+  can_modify_active_prompts_directly: false
+  can_replace_skills_directly: false
+  can_activate_mcp_directly: false
+  can_install_packages_directly: false
+  can_grant_tool_permissions_directly: false
+  can_write_trusted_memory_directly: false
+
+  allowed_outputs:
+    - report_card
+    - marksheet
+    - learning_curve_report
+    - agent_memo_entry
+    - capability_recommendation
+    - skill_replacement_recommendation
+    - skill_retirement_recommendation
+    - teacher_effectiveness_report
+    - morning_audit_report
+
+  approval_required_for:
+    - capability_activation
+    - skill_replacement
+    - skill_retirement
+    - trusted_agent_memo_promotion
+    - MCP_activation
+    - package_activation
