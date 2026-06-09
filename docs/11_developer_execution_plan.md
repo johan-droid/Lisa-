@@ -9,26 +9,24 @@ Follow it strictly. Do not jump to external execution before the planning core, 
 ## 1. Build Order
 
 ```txt
-1. Create FastAPI foundation.
-2. Add config system.
-3. Add chat gateway.
-4. Add Telegram webhook first.
-5. Add Slack and WhatsApp adapters.
-6. Add task runtime and audit log.
-7. Add policy files and policy loader.
-8. Add Telegram notification engine.
-9. Add Planner, Feasibility, and Ranker brains.
-10. Add Universal Plan Tokenizer.
-11. Add ReAct loop and threshold policy.
-12. Add RAG skeleton and trust zones.
-13. Add MQTT optional event layer.
-14. Add multiplexer skeletons.
-15. Add chat-controlled DevShell backend.
-16. Add approval rendering.
-17. Add tests.
-18. Add docs and lessons.
-19. Run test suite.
-20. Fix failures.
+Layer 0 — Repo Understanding + Guardrails
+Layer 1 — Backend Foundation
+Layer 2 — Chat-Native Interface Layer
+Layer 3 — Telegram Transparency Layer
+Layer 4 — Policy OS + Constitution
+Layer 5 — Task Runtime + Audit System
+Layer 6 — Three-Brain ReAct Planning Loop
+Layer 7 — Universal Plan Tokenizer
+Layer 7.5 — Teacher / Learner Brain + Night School
+Layer 7.75 — Auditor / School Inspector Brain
+Layer 8 — RAG + Memory Trust Zones
+Layer 8.5 — Cyber-Immune / World-Interaction Brain
+Layer 9 — MQTT Event Bus
+Layer 10 — Chat-Controlled DevShell
+Layer 11 — MCP Quarantine + Skill Graph Skeleton
+Layer 12 — Nightly Harness
+Layer 13 — Tests + Safety Verification
+Layer 14 — Developer Docs + Lessons
 ```
 
 ---

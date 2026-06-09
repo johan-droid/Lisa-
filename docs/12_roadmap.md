@@ -6,221 +6,56 @@ Do not give Lisa broad real-world power before the Policy OS, notification syste
 
 ---
 
-## Phase 0 — Documentation and Architecture
-
+## Layer 0 — Repo Understanding + Guardrails
 Status: current phase.
 
-Deliverables:
+## Layer 1 — Backend Foundation
+Build FastAPI foundation, config loader, health route, audit log skeleton, and basic task runtime skeleton.
 
-- README.
-- Architecture docs.
-- Visual Mermaid diagrams.
-- Developer execution plan.
-- Security model.
-- Telegram transparency law.
+## Layer 2 — Chat-Native Interface Layer
+Build Telegram, Slack, and WhatsApp adapters through one Unified Chat Gateway.
 
----
+## Layer 3 — Telegram Transparency Layer
+Build Telegram notification engine and no-silent-action policy.
 
-## Phase 1 — Chat-Native Foundation
+## Layer 4 — Policy OS + Constitution
+Build policy loader, constitution engine, permission engine, risk engine, approval engine, rollback engine, and circuit breaker.
 
-Build:
+## Layer 5 — Task Runtime + Audit System
+Build task lifecycle, task events, audit logs, approval objects, and state machine.
 
-- FastAPI app.
-- Telegram webhook.
-- Slack adapter.
-- WhatsApp adapter.
-- Unified Chat Gateway.
-- Message normalizer.
-- Command parser.
-- Identity/session mapper.
+## Layer 6 — Three-Brain ReAct Planning Loop
+Build Planner, Feasibility, and Ranker brains with threshold-based reloop.
 
-Goal:
+## Layer 7 — Universal Plan Tokenizer
+Build UPT plan packet compression and per-brain context packing.
 
-```txt
-User can send /lisa help and /lisa plan through Telegram.
-```
+## Layer 7.5 — Teacher / Learner Brain + Night School
+Build Teacher Brain and Night School learning loop.
 
----
+## Layer 7.75 — Auditor / School Inspector Brain
+Build Auditor Brain, report cards, marksheets, learning curves, Agent Memo, and capability recommendation logic.
 
-## Phase 2 — Policy OS + Notifications
+## Layer 8 — RAG + Memory Trust Zones
+Build RAG skeleton and MemoryMux trust zones.
 
-Build:
+## Layer 8.5 — Cyber-Immune / World-Interaction Brain
+Build Cyber-Immune Brain for package/MCP/repo/world interaction safety.
 
-- Constitution engine.
-- Permission engine.
-- Risk engine.
-- Approval engine.
-- Telegram Notification Engine.
-- Audit log.
+## Layer 9 — MQTT Event Bus
+Build optional MQTT event bus.
 
-Goal:
+## Layer 10 — Chat-Controlled DevShell
+Build sandboxed DevShell controlled only through chat.
 
-```txt
-Every meaningful task update is reported to Telegram.
-Crucial actions create validation requests.
-```
+## Layer 11 — MCP Quarantine + Skill Graph Skeleton
+Build MCP quarantine and Skill Graph skeleton.
 
----
+## Layer 12 — Nightly Harness
+Build nightly learning and reporting harness.
 
-## Phase 3 — Three-Brain ReAct Loop
+## Layer 13 — Tests + Safety Verification
+Build full test suite for safety and architecture.
 
-Build:
-
-- Planner Brain.
-- Feasibility Brain.
-- Ranker Brain.
-- Loop Governor.
-- Threshold policy.
-
-Goal:
-
-```txt
-Lisa can plan, check, rank, and reloop until a quality threshold passes.
-```
-
----
-
-## Phase 4 — Universal Plan Tokenizer
-
-Build:
-
-- Plan packet schema.
-- Plan compressor.
-- Context packer.
-- Plan diff.
-- Token budgeter.
-
-Goal:
-
-```txt
-Lisa reduces inter-brain token usage and avoids rate-limit pressure.
-```
-
----
-
-## Phase 5 — RAG Skeleton
-
-Build:
-
-- Policy RAG.
-- Trace RAG.
-- Skill RAG.
-- Research RAG.
-- MCP connector RAG.
-- Trust-zone retrieval.
-
-Goal:
-
-```txt
-Lisa retrieves the right context without trusting raw external data.
-```
-
----
-
-## Phase 6 — Chat-Controlled DevShell
-
-Build:
-
-- Sandbox workspace manager.
-- Chat command terminal gateway.
-- Command risk classifier.
-- Diff manager.
-- Eval runner.
-- Package runner.
-
-Goal:
-
-```txt
-Lisa can safely run tests and propose patches inside sandbox through chat.
-```
-
----
-
-## Phase 7 — Skill Graph
-
-Build:
-
-- Candidate skills.
-- Skill manifests.
-- Skill evals.
-- Skill promotion rules.
-- Skill retirement.
-
-Goal:
-
-```txt
-Lisa can propose improvements without activating them silently.
-```
-
----
-
-## Phase 8 — MCP Quarantine
-
-Build:
-
-- MCP discovery.
-- Manifest scanner.
-- Tool poisoning scanner.
-- Dependency scanner.
-- Sandbox test bench.
-- Trust score.
-
-Goal:
-
-```txt
-Lisa can discover MCPs but not activate unsafe connectors.
-```
-
----
-
-## Phase 9 — Nightly Harness
-
-Build:
-
-- Mistake miner.
-- Self-score generator.
-- Skill synthesizer.
-- Morning report.
-
-Goal:
-
-```txt
-Lisa reviews each day and sends a morning learning summary.
-```
-
----
-
-## Phase 10 — Controlled External Connectors
-
-Only after prior phases are tested.
-
-Possible connectors:
-
-- GitHub read-only.
-- GitHub PR proposal.
-- Gmail draft-only.
-- Calendar draft-only.
-- Slack team workflows.
-- Google Drive read-only.
-
-All external writes require validation.
-
----
-
-## Final Direction
-
-Lisa should become more powerful through:
-
-```txt
-better planning
-better feasibility checks
-better ranking
-better compression
-better RAG
-better memory
-better tests
-better sandboxing
-better Telegram transparency
-```
-
-Not through unrestricted tool power.
+## Layer 14 — Developer Docs + Lessons
+Create learning modules for each implemented layer.

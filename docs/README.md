@@ -21,6 +21,13 @@ Lisa is a chat-native self-improving agentic assistant. It has no browser dashbo
 11. [Lightweight Deployment](10_lightweight_deployment.md)
 12. [Developer Execution Plan](11_developer_execution_plan.md)
 13. [Roadmap](12_roadmap.md)
+14. [Teacher / Learner Brain](13_teacher_learner_brain.md)
+15. [Cyber-Immune Brain](14_cyber_immune_brain.md)
+16. [Auditor / School Inspector Brain](15_auditor_school_inspector_brain.md)
+17. [Agent Memo](16_agent_memo.md)
+18. [Night School](17_night_school.md)
+19. [Capability Allocation](18_capability_allocation.md)
+20. [Final Layer Plan](19_final_layer_plan.md)
 
 ---
 
