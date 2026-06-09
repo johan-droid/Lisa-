@@ -5,216 +5,260 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Lisa is a chat-native autonomous assistant architecture with Autopilot, Judicial Police supervision, sandbox isolation, tool discovery, and token-bank model routing."
+      content="Lisa is a chat-native autonomous agent system with Autopilot, Judicial Police supervision, sandbox isolation, tool discovery, and FreeLLMAPI token-bank routing."
     />
-    <title>Lisa — Chat-Native Autonomous Agent</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta name="theme-color" content="#080a17" />
+    <title>Lisa — Governed Autopilot for Real Work</title>
+    <link rel="stylesheet" href="/site/styles.css" />
   </head>
   <body>
-    <header class="hero">
+    <div class="aurora" aria-hidden="true"></div>
+
+    <header class="shell hero" id="top">
       <nav class="nav" aria-label="Primary navigation">
         <a class="brand" href="#top" aria-label="Lisa home">
           <span class="brand-mark">L</span>
-          <span>Lisa</span>
+          <span>
+            Lisa
+            <small>Chat-native intelligence</small>
+          </span>
         </a>
-        <div class="nav-links">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#platform">Platform</a>
           <a href="#capabilities">Capabilities</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#autopilot">Autopilot</a>
-          <a href="#safety">Safety</a>
+          <a href="#modes">Modes</a>
+          <a href="#trust">Trust</a>
+          <a class="nav-cta" href="#demo">Try command</a>
         </div>
       </nav>
 
-      <section id="top" class="hero-grid">
+      <section class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Chat-native autonomous agent system</p>
-          <h1>Lisa turns Telegram, Slack, and WhatsApp commands into governed autonomous work.</h1>
+          <p class="pill">⚖️ Constitutional AI agent OS</p>
+          <h1>Autonomous work, commanded from chat and governed like a real system.</h1>
           <p class="hero-text">
-            Lisa is designed as a no-dashboard agentic operating core with Autopilot, Judicial Police supervision,
-            sandboxed execution, open-source tool discovery, and FreeLLMAPI token-bank model routing.
+            Lisa is a no-dashboard agentic platform for Telegram, Slack, and WhatsApp. It plans, researches,
+            routes models, discovers tools, uses sandboxes, and stops at approval gates when the work becomes risky.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#capabilities">Explore capabilities</a>
-            <a class="button secondary" href="#architecture">See dataflow</a>
+            <a class="button primary" href="#platform">See the platform</a>
+            <a class="button secondary" href="#demo">Watch a command flow</a>
+          </div>
+          <div class="proof-strip" aria-label="Product highlights">
+            <span>Telegram-first</span>
+            <span>Autopilot-ready</span>
+            <span>512 MB sandbox profile</span>
+            <span>FreeLLMAPI token-bank routing</span>
           </div>
         </div>
 
-        <aside class="terminal-card" aria-label="Example Lisa command flow">
-          <div class="terminal-bar">
-            <span></span><span></span><span></span>
+        <aside class="command-studio" id="demo" aria-label="Interactive Lisa command studio">
+          <div class="studio-header">
+            <div>
+              <p class="eyebrow">Live command preview</p>
+              <h2>Ask once. Lisa plans the rest.</h2>
+            </div>
+            <span class="status-dot">Online</span>
           </div>
-          <pre><code>User:
-Autopilot mode: implement real Telegram pipeline
 
-Lisa:
-⚖️ Judicial Police active
-🚀 Autopilot started
-🧠 Brain swarm planning
-🔐 Approval gates detected
-📦 Sandbox: 512 MB isolated runtime
-✅ Next: prepare safe implementation plan</code></pre>
+          <div class="prompt-box">
+            <label for="commandInput">Command</label>
+            <textarea id="commandInput" rows="3">Autopilot mode: find the best open-source tool for PDF parsing and prepare integration</textarea>
+            <button class="button primary full" id="simulateButton" type="button">Simulate Lisa response</button>
+          </div>
+
+          <div class="response-card" aria-live="polite">
+            <div class="response-line"><span>⚖️</span><p><strong>Judicial Police:</strong> Autopilot Constitution selected</p></div>
+            <div class="response-line"><span>🧠</span><p><strong>Brain swarm:</strong> Planner + Teacher + Cyber-Immune activated</p></div>
+            <div class="response-line"><span>📦</span><p><strong>Sandbox:</strong> Local simulator / E2B / CodeSandbox boundary prepared</p></div>
+            <div class="response-line"><span>🔐</span><p><strong>Approval:</strong> Tool promotion requires Principal approval</p></div>
+          </div>
         </aside>
       </section>
     </header>
 
     <main>
-      <section class="section stats" aria-label="Lisa operating principles">
-        <article>
-          <strong>3</strong>
-          <span>chat interfaces only</span>
-        </article>
-        <article>
-          <strong>7+</strong>
-          <span>specialized brain roles</span>
-        </article>
-        <article>
-          <strong>512 MB</strong>
-          <span>default sandbox profile</span>
-        </article>
-        <article>
-          <strong>0</strong>
-          <span>browser dashboards required</span>
-        </article>
+      <section class="shell logo-cloud" aria-label="Lisa interfaces and runtimes">
+        <span>Telegram</span>
+        <span>Slack</span>
+        <span>WhatsApp</span>
+        <span>E2B</span>
+        <span>CodeSandbox</span>
+        <span>FreeLLMAPI</span>
+        <span>GitHub tools</span>
       </section>
 
-      <section id="capabilities" class="section">
+      <section class="shell section platform" id="platform">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Platform</p>
+          <h2>A chat-controlled operating layer for real tasks.</h2>
+          <p>
+            Lisa is not a normal chatbot or dashboard. It is a governed workflow system: user command in,
+            constitutional mode selected, brain swarm plans, sandbox executes, approvals guard risk, and chat reports everything.
+          </p>
+        </div>
+
+        <div class="platform-grid">
+          <article class="spotlight-card large">
+            <span class="card-label">01</span>
+            <h3>Command from where you already work</h3>
+            <p>Telegram for primary control, Slack for teams, and WhatsApp for fast mobile instructions.</p>
+          </article>
+          <article class="spotlight-card">
+            <span class="card-label">02</span>
+            <h3>No dashboard dependency</h3>
+            <p>Approvals, diffs, reports, status, and summaries flow through chat-native messages.</p>
+          </article>
+          <article class="spotlight-card">
+            <span class="card-label">03</span>
+            <h3>Built for serious autonomy</h3>
+            <p>Autopilot can plan, inspect, research, patch, test, and prepare PR metadata inside controlled boundaries.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell section" id="capabilities">
         <div class="section-heading">
           <p class="eyebrow">Capabilities</p>
-          <h2>What Lisa is designed to do</h2>
-          <p>
-            Lisa handles user-requested jobs by planning first, using specialized brains, asking approval when needed,
-            and executing risky work only through sandboxed runtimes.
-          </p>
+          <h2>Special features that make Lisa feel different.</h2>
+        </div>
+
+        <div class="capability-tabs" role="tablist" aria-label="Capability categories">
+          <button class="tab active" type="button" data-filter="all">All</button>
+          <button class="tab" type="button" data-filter="autonomy">Autonomy</button>
+          <button class="tab" type="button" data-filter="safety">Safety</button>
+          <button class="tab" type="button" data-filter="tools">Tools</button>
+          <button class="tab" type="button" data-filter="runtime">Runtime</button>
         </div>
 
         <div class="card-grid">
-          <article class="card">
-            <div class="icon">💬</div>
-            <h3>Chat-native control</h3>
-            <p>Operate through Telegram, Slack, and WhatsApp without a traditional web dashboard.</p>
-          </article>
-          <article class="card">
+          <article class="feature-card" data-category="autonomy">
             <div class="icon">🚀</div>
             <h3>Autopilot Mode</h3>
-            <p>Trigger controlled autonomous work with explicit commands like “Autopilot mode: &lt;goal&gt;”.</p>
+            <p>Explicitly triggered autonomous work that makes a plan, chooses strategy, uses brain swarms, and stops at approvals.</p>
           </article>
-          <article class="card">
+          <article class="feature-card" data-category="safety">
             <div class="icon">⚖️</div>
             <h3>Judicial Police</h3>
-            <p>Top-level constitutional enforcement that can allow, pause, stop, block, quarantine, or require approval.</p>
+            <p>The top-most authority enforcing Normal, Autopilot, and Spike constitutions across every major action.</p>
           </article>
-          <article class="card">
+          <article class="feature-card" data-category="autonomy">
             <div class="icon">🧠</div>
-            <h3>Brain swarm orchestration</h3>
-            <p>Planner, Feasibility, Ranker, Teacher, Cyber-Immune, Red Team, Principal, and Judicial roles cooperate.</p>
+            <h3>Brain swarm</h3>
+            <p>Planner, Feasibility, Ranker, Teacher, Cyber-Immune, Red Team, Principal, and Judicial roles mapped clearly.</p>
           </article>
-          <article class="card">
-            <div class="icon">🧪</div>
-            <h3>Spike Mode</h3>
-            <p>Explore approaches, compare tools, and prototype safely without merge, deploy, or irreversible changes.</p>
-          </article>
-          <article class="card">
+          <article class="feature-card" data-category="tools">
             <div class="icon">🔎</div>
-            <h3>Teacher-led tool discovery</h3>
-            <p>Find open-source tools from GitHub and registries, then quarantine, scan, and request Principal approval.</p>
+            <h3>Teacher tool discovery</h3>
+            <p>Finds open-source GitHub tools, compares options, creates candidates, and sends risky adoption to approval.</p>
           </article>
-          <article class="card">
+          <article class="feature-card" data-category="safety">
             <div class="icon">🛡️</div>
-            <h3>Cyber-Immune review</h3>
-            <p>Inspect package behavior, install scripts, dependencies, permissions, and supply-chain risk.</p>
+            <h3>Cyber-Immune quarantine</h3>
+            <p>Scans packages, install scripts, dependency behavior, permission requests, and supply-chain risk before trust.</p>
           </article>
-          <article class="card">
+          <article class="feature-card" data-category="runtime">
             <div class="icon">📦</div>
             <h3>Sandbox isolation</h3>
-            <p>Route risky commands through E2B, CodeSandbox, or a local simulator with a 512 MB default profile.</p>
+            <p>Routes risky execution through E2B, CodeSandbox, or a local simulator with a 512 MB default profile.</p>
           </article>
-          <article class="card">
+          <article class="feature-card" data-category="runtime">
             <div class="icon">⚡</div>
-            <h3>Model routing</h3>
-            <p>Use FreeLLMAPI token-bank capacity, model health, fallbacks, and usage accounting for Autopilot reasoning.</p>
+            <h3>Fast model switching</h3>
+            <p>Uses model health, token capacity, fallback limits, and latency targets to shift models when needed.</p>
+          </article>
+          <article class="feature-card" data-category="runtime">
+            <div class="icon">🔋</div>
+            <h3>FreeLLMAPI token bank</h3>
+            <p>Autopilot and Spike can reserve, consume, audit, and release token capacity across providers.</p>
+          </article>
+          <article class="feature-card" data-category="safety">
+            <div class="icon">👑</div>
+            <h3>Principal approval</h3>
+            <p>The 7th Brain approves risky evolution: tool promotion, package install, MCP activation, deployment, and merge.</p>
           </article>
         </div>
       </section>
 
-      <section id="architecture" class="section split">
-        <div>
-          <p class="eyebrow">Architecture</p>
-          <h2>Governed dataflow from chat to execution</h2>
-          <p>
-            Lisa keeps routes thin. Real decisions move through LisaCore, constitutional mode selection, brain orchestration,
-            model routing, capability checks, sandbox runtime, audit logging, and response rendering.
-          </p>
-        </div>
-        <ol class="flow-list">
-          <li><span>01</span> Chat webhook receives Telegram, Slack, or WhatsApp message</li>
-          <li><span>02</span> MessageNormalizer and CommandParser produce internal command shape</li>
-          <li><span>03</span> Judicial Police selects Normal, Autopilot, or Spike Constitution</li>
-          <li><span>04</span> Brain swarm plans, scores, critiques, and requests approvals</li>
-          <li><span>05</span> TokenBankBroker and ModelRouter select the best available model</li>
-          <li><span>06</span> SandboxRuntime isolates risky execution and records results</li>
-          <li><span>07</span> AuditLog captures every meaningful decision and response</li>
-        </ol>
-      </section>
-
-      <section id="autopilot" class="section mode-section">
-        <div class="section-heading">
-          <p class="eyebrow">Modes</p>
-          <h2>Normal, Autopilot, and Spike run under separate constitutions</h2>
+      <section class="shell section flow-section" id="modes">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Constitutional modes</p>
+          <h2>Power changes by mode. Enforcement never disappears.</h2>
         </div>
         <div class="mode-grid">
           <article class="mode-card">
-            <h3>Normal Constitution</h3>
-            <p>Strict, plan-first behavior for regular chat and /lisa plan. Low token usage and no autonomous execution by default.</p>
+            <span>Normal</span>
+            <h3>Plan-first mode</h3>
+            <p>For regular chat and /lisa plan. Low token budget, strict constraints, no autonomous execution by default.</p>
           </article>
           <article class="mode-card featured">
-            <h3>Autopilot Constitution</h3>
-            <p>Expanded autonomy for explicit Autopilot commands: brain swarm planning, sandboxed execution, token-bank routing, and approval gates.</p>
+            <span>Autopilot</span>
+            <h3>Governed autonomy</h3>
+            <p>Brain swarm, token-bank routing, sandbox execution, tool discovery, patch planning, tests, and approval gates.</p>
           </article>
           <article class="mode-card">
-            <h3>Spike Constitution</h3>
-            <p>Exploratory mode for research and prototypes. Allows comparison and sandbox experiments, but no irreversible changes.</p>
+            <span>Spike</span>
+            <h3>Safe exploration</h3>
+            <p>Research, compare models/tools, prototype in sandbox, and recommend paths without irreversible changes.</p>
           </article>
+        </div>
+
+        <div class="timeline" aria-label="Lisa execution timeline">
+          <div><strong>01</strong><p>Message normalized from chat</p></div>
+          <div><strong>02</strong><p>Judicial Police selects constitution</p></div>
+          <div><strong>03</strong><p>Brains plan and critique</p></div>
+          <div><strong>04</strong><p>Token bank and model router decide</p></div>
+          <div><strong>05</strong><p>Sandbox executes approved work</p></div>
+          <div><strong>06</strong><p>Audit log and chat report sent</p></div>
         </div>
       </section>
 
-      <section id="safety" class="section safety">
-        <div>
-          <p class="eyebrow">Safety model</p>
-          <h2>Powerful does not mean lawless</h2>
+      <section class="shell section trust" id="trust">
+        <div class="trust-copy">
+          <p class="eyebrow">Trust system</p>
+          <h2>Autopilot is powerful, not lawless.</h2>
           <p>
-            Autopilot may relax normal bottlenecks, but it never bypasses the Judicial Police, audit logs, approval gates,
-            sandbox isolation, Principal approval, or tool quarantine.
+            Lisa can move fast only inside the active Constitution. Judicial Police can block, pause, stop, quarantine,
+            or escalate to Principal approval before anything risky continues.
           </p>
         </div>
-        <div class="safety-grid">
+        <div class="trust-wall">
           <article>
             <h3>Always blocked</h3>
             <ul>
-              <li>Disabling Judicial Police or AuditLog</li>
-              <li>Bypassing SandboxRuntime</li>
-              <li>Secret access without approval</li>
-              <li>Merge, deploy, or database writes without approval</li>
-              <li>Destructive shell patterns like rm -rf, curl | sh, chmod 777</li>
+              <li>Disabling Judicial Police, AuditLog, or SandboxRuntime</li>
+              <li>Bypassing approval gates or sandbox boundaries</li>
+              <li>Destructive shell commands such as rm -rf, curl | sh, chmod 777</li>
+              <li>Secret access, deployment, or database writes without approval</li>
             </ul>
           </article>
           <article>
             <h3>Approval required</h3>
             <ul>
-              <li>Package, MCP, CLI, or tool activation</li>
+              <li>Tool promotion from quarantine to trusted use</li>
+              <li>Package, MCP, CLI, or Docker activation</li>
               <li>Large token-bank reservations</li>
-              <li>Sandbox network enablement</li>
-              <li>Policy or constitution changes</li>
-              <li>External messages outside the active user channel</li>
+              <li>Merge to main, deploy, env changes, or external messages</li>
             </ul>
           </article>
         </div>
       </section>
+
+      <section class="shell cta-section">
+        <div>
+          <p class="eyebrow">Brand promise</p>
+          <h2>Brains reason. Judicial Police enforces. Sandbox executes. Chat reports everything.</h2>
+        </div>
+        <a class="button primary" href="#top">Back to top</a>
+      </section>
     </main>
 
-    <footer class="footer">
-      <p>Lisa — Brains reason. Judicial Police enforces. Sandbox executes. Chat reports everything.</p>
+    <footer class="footer shell">
+      <p>Lisa — Governed Autopilot for chat-native autonomous work.</p>
+      <p class="muted">Designed for Telegram, Slack, WhatsApp, sandboxed execution, and constitutional control.</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="/site/script.js"></script>
   </body>
 </html>
