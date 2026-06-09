@@ -8,7 +8,7 @@ def health_check():
     return {
         "status": "ok",
         "app": settings.app_name,
-        "mode": settings.mode,
-        "chat_native": settings.chat_native,
-        "dashboard_enabled": settings.dashboard_enabled
+        "mode": getattr(settings, "mode", "unknown"),
+        "chat_native": getattr(settings, "chat_native", True),
+        "dashboard_enabled": getattr(settings, "dashboard_enabled", False)
     }
