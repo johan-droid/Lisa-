@@ -22,6 +22,14 @@ class CommandParser:
         if nl_status:
             return ParsedCommand(command="/lisa status", args=nl_status.group(1))
 
+        # Explicit Autopilot and Spike triggers
+        if text.lower().startswith("autopilot mode:") or text.lower().startswith("/lisa autopilot") or text.lower().startswith("lisa autopilot"):
+             # For parsing, we just return it as a valid command, the detector handles mode
+             return ParsedCommand(command=text, args="")
+
+        if text.lower().startswith("spike mode:") or text.lower().startswith("/lisa spike"):
+             return ParsedCommand(command=text, args="")
+
         # Standard commands
         parts = text.split(" ", 2)
         if len(parts) >= 2 and parts[0].lower() == "/lisa":
@@ -37,9 +45,10 @@ class CommandParser:
             if cmd in valid_commands:
                 return ParsedCommand(command=cmd, args=args)
 
+        # For unknown jobs, we still consider it valid to allow JobRouter/Planner to handle it
         return ParsedCommand(
             command="unknown",
-            args="",
-            is_valid=False,
-            error_reason="Invalid or unknown command"
+            args=text,
+            is_valid=True, # Make it valid so it reaches the planner
+            error_reason=None
         )

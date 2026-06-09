@@ -1,0 +1,11 @@
+mode: spike
+allowed_actions:
+  - planning
+  - read_only_inspection
+  - sandbox_execution
+  - model_switching
+approval_required_actions: []
+always_blocked_actions:
+  - write_outside_sandbox
+  - deploy
+  - tool_adoption

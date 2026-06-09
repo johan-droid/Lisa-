@@ -1,0 +1,10 @@
+mode: normal
+allowed_actions:
+  - planning
+  - read_only_inspection
+approval_required_actions:
+  - execution
+  - tool_adoption
+always_blocked_actions:
+  - write
+  - deploy

@@ -1,0 +1,12 @@
+mode: autopilot
+allowed_actions:
+  - planning
+  - read_only_inspection
+  - sandbox_execution
+  - model_switching
+approval_required_actions:
+  - tool_adoption
+  - write_outside_sandbox
+  - deploy
+always_blocked_actions:
+  - destructive_commands

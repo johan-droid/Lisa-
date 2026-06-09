@@ -3,25 +3,19 @@ import os
 from typing import Dict, Any
 
 class PolicyLoader:
-    def __init__(self, policies_dir: str = "backend/app/policies"):
-        self.policies_dir = policies_dir
-        self.defaults = {
-            "thresholds": {
-                "ranker_min_score": 0.7
-            },
-            "blocked_commands": [
-                "rm -rf", "curl | sh", "sudo", "chmod 777", "delete database", "drop table", "devshell terminal"
-            ]
-        }
+    def __init__(self, policy_dir: str = "backend/app/policies"):
+        self.policy_dir = policy_dir
 
-    def load(self) -> Dict[str, Any]:
-        policy_file = os.path.join(self.policies_dir, "main.yaml")
-        if os.path.exists(policy_file):
-            try:
-                with open(policy_file, 'r') as f:
-                    data = yaml.safe_load(f)
-                    if data:
-                        return {**self.defaults, **data}
-            except Exception:
-                pass
-        return self.defaults
+    def load_constitution(self, mode: str) -> Dict[str, Any]:
+        file_path = os.path.join(self.policy_dir, f"{mode}_constitution.yaml")
+        if not os.path.exists(file_path):
+             return {}
+        with open(file_path, "r") as f:
+             return yaml.safe_load(f)
+
+    def load_policy(self, name: str) -> Dict[str, Any]:
+        file_path = os.path.join(self.policy_dir, f"{name}.yaml")
+        if not os.path.exists(file_path):
+             return {}
+        with open(file_path, "r") as f:
+             return yaml.safe_load(f)
