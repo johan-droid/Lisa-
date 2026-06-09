@@ -22,3 +22,6 @@ class AuditLogger:
 
     def get_logs(self) -> List[AuditEvent]:
         return self._logs
+
+    def filter_by_stage(self, stage: str) -> List[AuditEvent]:
+        return [log for log in self._logs if log.stage == stage]

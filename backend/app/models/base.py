@@ -87,3 +87,107 @@ class ApprovalRequest(BaseModel):
     approval_id: str
     task_id: str
     reason: str
+
+class ConstitutionalVerdict(BaseModel):
+    verdict_id: str
+    request_id: str
+    mode: str
+    verdict_type: str
+    allowed: bool
+    approval_required: bool
+    should_pause_loop: bool
+    should_stop_loop: bool
+    suspicion_score: float
+    risk_level: str
+    violated_rules: List[str] = Field(default_factory=list)
+    warnings: List[str] = Field(default_factory=list)
+    reason: str
+    required_action: Optional[str] = None
+    created_at: float
+
+class ConstitutionViolation(BaseModel):
+    violation_id: str
+    task_id: str
+    mode: str
+    actor_brain: str
+    action_type: str
+    violated_rule: str
+    severity: str
+    evidence: str
+    judicial_verdict_id: str
+    created_at: float
+
+class Constitution(BaseModel):
+    constitution_id: str
+    mode: str
+    version: str
+    allowed_actions: List[str] = Field(default_factory=list)
+    approval_required_actions: List[str] = Field(default_factory=list)
+    always_blocked_actions: List[str] = Field(default_factory=list)
+    suspicion_triggers: List[str] = Field(default_factory=list)
+    loop_limits: Dict[str, Any] = Field(default_factory=dict)
+    token_budget_limits: Dict[str, Any] = Field(default_factory=dict)
+    sandbox_rules: Dict[str, Any] = Field(default_factory=dict)
+    tool_adoption_rules: Dict[str, Any] = Field(default_factory=dict)
+    principal_escalation_rules: Dict[str, Any] = Field(default_factory=dict)
+    audit_requirements: List[str] = Field(default_factory=list)
+
+class JudicialInspectionRequest(BaseModel):
+    request_id: str
+    task_id: str
+    mode: str
+    actor_brain: str
+    action_type: str
+    action_summary: str
+    payload: Dict[str, Any] = Field(default_factory=dict)
+    requested_capability: Optional[str] = None
+    risk_level: str
+    context: Dict[str, Any] = Field(default_factory=dict)
+    created_at: float
+
+class PrincipalApprovalRequest(BaseModel):
+    approval_id: str
+    task_id: str
+    requested_by_brain: str
+    action_type: str
+    reason: str
+    risk_level: str
+    evidence: Dict[str, Any] = Field(default_factory=dict)
+    cyber_immune_report: Optional[Dict[str, Any]] = None
+    red_team_report: Optional[Dict[str, Any]] = None
+    judicial_verdict: Optional[Dict[str, Any]] = None
+    status: str
+    created_at: float
+    decided_at: Optional[float] = None
+
+class PrincipalDecision(BaseModel):
+    approval_id: str
+    decision: str
+    reason: str
+    restrictions: List[str] = Field(default_factory=list)
+    expires_at: Optional[float] = None
+    created_at: float
+
+class ToolCandidate(BaseModel):
+    candidate_id: str
+    name: str
+    source_type: str
+    source_url: str
+    repository: Optional[str] = None
+    package_name: Optional[str] = None
+    license: Optional[str] = None
+    stars: Optional[int] = None
+    last_updated: Optional[str] = None
+    maintainer_signal: Optional[str] = None
+    install_commands: List[str] = Field(default_factory=list)
+    required_permissions: List[str] = Field(default_factory=list)
+    network_behavior: Optional[str] = None
+    filesystem_behavior: Optional[str] = None
+    risk_flags: List[str] = Field(default_factory=list)
+    trust_score: Optional[float] = None
+    teacher_summary: Optional[str] = None
+    cyber_immune_report: Optional[Dict[str, Any]] = None
+    red_team_report: Optional[Dict[str, Any]] = None
+    principal_decision: Optional[Dict[str, Any]] = None
+    judicial_verdict: Optional[Dict[str, Any]] = None
+    status: str

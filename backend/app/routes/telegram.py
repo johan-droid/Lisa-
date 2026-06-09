@@ -1,39 +1,39 @@
-from fastapi import APIRouter, Request, HTTPException
-from app.models.base import IncomingChannelMessage
-from app.chat.gateway import UnifiedChatGateway
+from fastapi import APIRouter, Request
+from app.models.base import IncomingChannelMessage, NormalizedMessage
+from app.core.lisa_core import LisaCore
 import time
-import uuid
 
-router = APIRouter()
-gateway = UnifiedChatGateway()
+router = APIRouter(prefix="/telegram", tags=["telegram"])
+lisa = LisaCore()
 
-@router.post("/webhooks/telegram")
+@router.post("")
+@router.post("/")
+@router.post("/webhook")
 async def telegram_webhook(request: Request):
-    try:
-        payload = await request.json()
-    except Exception:
-        raise HTTPException(status_code=400, detail="Invalid JSON")
+    payload = await request.json()
 
-    message_data = payload.get("message")
-    if not message_data:
-        return {"status": "ok", "message": "Ignored non-message update"}
+    # Extract data from telegram payload
+    message = payload.get("message", {})
+    text = message.get("text", "")
+    chat = message.get("chat", {})
+    from_user = message.get("from", {})
 
-    text = message_data.get("text", "")
     if not text:
-        return {"status": "ok", "message": "Ignored non-text message"}
+         return {"status": "ok"}
 
-    incoming = IncomingChannelMessage(
-        message_id=str(message_data.get("message_id", uuid.uuid4())),
-        channel="telegram",
-        external_user_id=str(message_data.get("from", {}).get("id", "unknown")),
-        external_chat_id=str(message_data.get("chat", {}).get("id", "unknown")),
-        text=text,
-        timestamp=time.time(),
-        raw_payload_ref=payload
+    msg = NormalizedMessage(
+         message_id=str(message.get("message_id", "")),
+         channel="telegram",
+         external_user_id=str(from_user.get("id", "")),
+         external_chat_id=str(chat.get("id", "")),
+         text=text,
+         timestamp=time.time(),
+         raw_payload_ref=payload
     )
 
-    result = gateway.process_message(incoming)
+    result = lisa.process(msg)
 
+    # Send back required test fields
     return {
         "status": result.status,
         "reply": result.reply,
