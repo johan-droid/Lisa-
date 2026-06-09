@@ -9,12 +9,23 @@ navLinks.forEach((link) => {
 
 const revealTargets = document.querySelectorAll('.card, .mode-card, .safety article, .flow-list li, .stats article');
 
+const showElement = (target) => {
+  target.style.opacity = '1';
+  target.style.transform = 'translateY(0)';
+};
+
+revealTargets.forEach((target) => {
+  target.style.opacity = '0';
+  target.style.transform = 'translateY(18px)';
+  target.style.transition = 'opacity 420ms ease, transform 420ms ease';
+});
+
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          showElement(entry.target);
           observer.unobserve(entry.target);
         }
       });
@@ -22,24 +33,7 @@ if ('IntersectionObserver' in window) {
     { threshold: 0.12 }
   );
 
-  revealTargets.forEach((target) => {
-    target.style.opacity = '0';
-    target.style.transform = 'translateY(18px)';
-    target.style.transition = 'opacity 420ms ease, transform 420ms ease';
-    observer.observe(target);
-  });
+  revealTargets.forEach((target) => observer.observe(target));
+} else {
+  revealTargets.forEach(showElement);
 }
-
-document.addEventListener('transitionend', (event) => {
-  if (event.target.classList.contains('is-visible')) {
-    event.target.style.opacity = '1';
-    event.target.style.transform = 'translateY(0)';
-  }
-});
-
-requestAnimationFrame(() => {
-  document.querySelectorAll('.is-visible').forEach((target) => {
-    target.style.opacity = '1';
-    target.style.transform = 'translateY(0)';
-  });
-});
