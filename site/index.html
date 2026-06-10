@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Lisa is a chat-native autonomous agent system with governed Autopilot, seven-brain planning, sandbox isolation, approval gates, and Telegram-first status reporting."
+      content="Lisa developer architecture overview: chat-native interfaces, seven-brain orchestration, constitutional modes, sandbox runtime, approval gates, model routing, and implementation boundaries."
     />
     <meta name="theme-color" content="#080a17" />
-    <title>Lisa — Governed Autopilot for Real Work</title>
+    <title>Lisa — Developer Architecture Overview</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -27,181 +27,206 @@
           <span class="brand-mark">L</span>
           <span>
             Lisa
-            <small>Chat-native intelligence</small>
+            <small>Developer architecture</small>
           </span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
         <div class="nav-links" id="navLinks">
-          <a href="#platform">Platform</a>
-          <a href="#capabilities">Capabilities</a>
-          <a href="#brains">7 brains</a>
-          <a href="#modes">Modes</a>
-          <a href="#trust">Trust</a>
-          <a class="nav-cta" href="#demo">Try command</a>
+          <a href="#overview">Overview</a>
+          <a href="#flow">Flow</a>
+          <a href="#brains">Brains</a>
+          <a href="#runtime">Runtime</a>
+          <a href="#contracts">Contracts</a>
+          <a class="nav-cta" href="#guardrails">Guardrails</a>
         </div>
       </nav>
 
       <section class="hero-grid">
         <div class="hero-copy">
-          <p class="pill">⚖️ Constitutional AI agent OS</p>
-          <h1>Autonomous work, commanded from chat and governed like a real system.</h1>
+          <p class="pill">⚖️ Chat-native autonomous agent system</p>
+          <h1>Lisa turns chat commands into governed, auditable engineering work.</h1>
           <p class="hero-text">
-            Lisa is a no-dashboard agentic platform for Telegram, Slack, and WhatsApp. It plans,
-            researches, routes models, discovers tools, uses sandboxes, and stops at approval gates
-            when work becomes risky.
+            Lisa is designed as a no-dashboard agent platform controlled through Telegram, Slack, and WhatsApp. A developer should be able to understand the system from this page: how commands enter, which brains reason, where risky work executes, what requires approval, and which folders should stay untouched.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#platform">See the platform</a>
-            <a class="button secondary" href="#demo">Watch a command flow</a>
+            <a class="button primary" href="#flow">Read execution flow</a>
+            <a class="button secondary" href="#contracts">View developer contracts</a>
           </div>
-          <div class="proof-strip" aria-label="Product highlights">
-            <span>Telegram-first</span>
-            <span>Autopilot-ready</span>
-            <span>Seven-brain review</span>
-            <span>Sandboxed execution</span>
-            <span>Approval-gated changes</span>
+          <div class="proof-strip" aria-label="System highlights">
+            <span>Telegram-first updates</span>
+            <span>7-brain orchestration</span>
+            <span>Constitutional modes</span>
+            <span>Sandbox-first execution</span>
+            <span>Approval-gated risk</span>
           </div>
         </div>
 
-        <aside class="command-studio" id="demo" aria-label="Interactive Lisa command studio">
+        <aside class="command-studio" id="demo" aria-label="Lisa command preview">
           <div class="studio-header">
             <div>
-              <p class="eyebrow">Live command preview</p>
-              <h2>Ask once. Lisa plans the rest.</h2>
+              <p class="eyebrow">Command lifecycle preview</p>
+              <h2>One instruction becomes a controlled workflow.</h2>
             </div>
-            <span class="status-dot">Online</span>
+            <span class="status-dot">Documented</span>
           </div>
 
           <div class="prompt-box">
-            <label for="commandInput">Command</label>
-            <textarea id="commandInput" rows="3">Autopilot mode: inspect this repo, find broken features, patch safely, test, and report every important workspace update in Telegram.</textarea>
+            <label for="commandInput">Example chat command</label>
+            <textarea id="commandInput" rows="4">Autopilot mode: inspect the repo, map broken layers, patch safely, run tests, and notify Telegram after every meaningful workspace update.</textarea>
             <button class="button primary full" id="simulateButton" type="button">Simulate Lisa response</button>
           </div>
 
           <div class="response-card" aria-live="polite" id="responseCard">
-            <div class="response-line"><span>⚖️</span><p><strong>Judicial Police:</strong> Autopilot Constitution selected</p></div>
-            <div class="response-line"><span>🧠</span><p><strong>Brain swarm:</strong> Planner + Feasibility + Ranker + Red Team Mirror activated</p></div>
-            <div class="response-line"><span>📦</span><p><strong>Sandbox:</strong> local / E2B / CodeSandbox boundary prepared before risky execution</p></div>
-            <div class="response-line"><span>🔐</span><p><strong>Approval:</strong> merge, deploy, env, secrets, and tool promotion require Principal validation</p></div>
+            <div class="response-line"><span>01</span><p><strong>Normalize:</strong> incoming Telegram / Slack / WhatsApp payload becomes one internal message shape.</p></div>
+            <div class="response-line"><span>02</span><p><strong>Govern:</strong> Judicial Police selects Normal, Autopilot, or Spike Constitution.</p></div>
+            <div class="response-line"><span>03</span><p><strong>Reason:</strong> Planner, Feasibility, Ranker, Teacher, Cyber-Immune, Red Team, and Principal roles review.</p></div>
+            <div class="response-line"><span>04</span><p><strong>Execute:</strong> risky actions go through SandboxRuntime and approval gates before merge/deploy/env changes.</p></div>
           </div>
         </aside>
       </section>
     </header>
 
     <main>
-      <section class="shell logo-cloud" aria-label="Lisa interfaces and runtimes">
+      <section class="shell logo-cloud" aria-label="Lisa surfaces and integrations">
         <span>Telegram</span>
         <span>Slack</span>
         <span>WhatsApp</span>
-        <span>E2B</span>
-        <span>CodeSandbox</span>
-        <span>FreeLLMAPI</span>
-        <span>GitHub tools</span>
+        <span>GitHub</span>
+        <span>SandboxRuntime</span>
+        <span>ModelRouter</span>
+        <span>AuditLog</span>
       </section>
 
-      <section class="shell section platform" id="platform">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Platform</p>
-          <h2>A chat-controlled operating layer for real tasks.</h2>
+      <section class="shell section" id="overview">
+        <div class="section-heading wide">
+          <p class="eyebrow">01 / System overview</p>
+          <h2>Developer mental model</h2>
           <p>
-            Lisa is not a traditional dashboard. A user command enters chat, Lisa normalizes it,
-            selects the active constitution, creates a plan, reviews risk, routes models, executes only
-            inside safe boundaries, and reports every meaningful workspace update back to chat.
+            Lisa should be read as an orchestration layer, not a static website and not a simple chatbot. Chat adapters receive messages. Core orchestration interprets the intent. Judicial Police applies the active Constitution. Brain modules plan and critique. Runtime modules handle tools, model routing, sandbox execution, persistence, notifications, and audit logging.
           </p>
         </div>
 
-        <div class="platform-grid">
+        <div class="overview-grid">
           <article class="spotlight-card large">
-            <span class="card-label">01</span>
-            <h3>Command from where you already work</h3>
-            <p>Telegram for primary control, Slack for teams, and WhatsApp for fast mobile instructions.</p>
+            <span class="card-label">Core idea</span>
+            <h3>Chat is the UI. Governance is the product.</h3>
+            <p>Lisa must not depend on a traditional dashboard for user-facing control. Every meaningful workspace update should be explainable through chat: active brain, current decision, changed files/tools/workspaces, and what happens next.</p>
           </article>
-          <article class="spotlight-card">
-            <span class="card-label">02</span>
-            <h3>No dashboard dependency</h3>
-            <p>Approvals, diffs, logs, reports, and status summaries flow through chat-native messages.</p>
-          </article>
-          <article class="spotlight-card">
-            <span class="card-label">03</span>
-            <h3>Built for serious autonomy</h3>
-            <p>Autopilot can inspect, plan, patch, test, summarize, and prepare PR metadata inside controlled boundaries.</p>
-          </article>
+          <article class="spotlight-card"><h3>Input boundary</h3><p>Only Telegram, Slack, and WhatsApp should be treated as user-facing command interfaces.</p></article>
+          <article class="spotlight-card"><h3>Execution boundary</h3><p>Risky commands, package installs, repo modifications, and tool trials belong in SandboxRuntime, not the trusted backend process.</p></article>
+          <article class="spotlight-card"><h3>Approval boundary</h3><p>Secrets, env changes, deployment, database writes, tool promotion, and merge require explicit Principal approval.</p></article>
+          <article class="spotlight-card"><h3>Documentation boundary</h3><p>Architecture and implementation notes belong in docs/. The site/ folder must remain the polished public developer overview.</p></article>
         </div>
       </section>
 
-      <section class="shell section" id="capabilities">
-        <div class="section-heading">
-          <p class="eyebrow">Capabilities</p>
-          <h2>Special features that make Lisa feel different.</h2>
+      <section class="shell section" id="flow">
+        <div class="section-heading wide">
+          <p class="eyebrow">02 / End-to-end execution flow</p>
+          <h2>From chat command to auditable result</h2>
         </div>
 
-        <div class="capability-tabs" role="tablist" aria-label="Capability categories">
-          <button class="tab active" type="button" data-filter="all">All</button>
-          <button class="tab" type="button" data-filter="autonomy">Autonomy</button>
-          <button class="tab" type="button" data-filter="safety">Safety</button>
-          <button class="tab" type="button" data-filter="tools">Tools</button>
-          <button class="tab" type="button" data-filter="runtime">Runtime</button>
-        </div>
+        <pre class="pipeline"><code>Telegram / Slack / WhatsApp
+→ Chat adapter validates platform payload
+→ MessageNormalizer creates canonical input
+→ CommandParser detects intent, trigger, mode, target repo, and risk
+→ LisaCore opens task context and audit span
+→ Judicial Police selects Constitution
+→ Brain swarm plans, checks feasibility, ranks, critiques, and escalates
+→ ModelRouter / TokenBankBroker choose capacity when needed
+→ CapabilityRegistry checks allowed tools
+→ SandboxRuntime executes risky work in an isolated workspace
+→ ApprovalEngine blocks or requests Principal validation at hard gates
+→ AuditLog records decisions, files, commands, tool choices, and outputs
+→ Notification service reports status back to Telegram / Slack / WhatsApp</code></pre>
 
-        <div class="card-grid">
-          <article class="feature-card" data-category="autonomy"><div class="icon">🚀</div><h3>Autopilot Mode</h3><p>Explicitly triggered autonomous work that makes a plan, chooses strategy, uses brain swarms, and stops at approvals.</p></article>
-          <article class="feature-card" data-category="safety"><div class="icon">⚖️</div><h3>Judicial Police</h3><p>The top-most authority enforcing Normal, Autopilot, and Spike constitutions across every major action.</p></article>
-          <article class="feature-card" data-category="autonomy"><div class="icon">🧠</div><h3>Seven-brain system</h3><p>Planner, Feasibility, Ranker, Teacher, Cyber-Immune, Red Team Mirror, and Principal/Auditor roles work with Judicial enforcement.</p></article>
-          <article class="feature-card" data-category="tools"><div class="icon">🔎</div><h3>Teacher discovery</h3><p>Finds open-source GitHub tools, compares options, creates candidates, and escalates risky adoption to approval.</p></article>
-          <article class="feature-card" data-category="safety"><div class="icon">🛡️</div><h3>Cyber-Immune quarantine</h3><p>Scans packages, install scripts, dependency behavior, permission requests, and supply-chain risk before trust.</p></article>
-          <article class="feature-card" data-category="runtime"><div class="icon">📦</div><h3>Sandbox isolation</h3><p>Routes risky execution through E2B, CodeSandbox, or a local simulator with constrained resource profiles.</p></article>
-          <article class="feature-card" data-category="runtime"><div class="icon">⚡</div><h3>Fast model switching</h3><p>Uses model health, token capacity, fallback limits, and latency targets to shift models when needed.</p></article>
-          <article class="feature-card" data-category="runtime"><div class="icon">🔋</div><h3>Token-bank routing</h3><p>Autopilot and Spike can reserve, consume, audit, and release token capacity across providers.</p></article>
-          <article class="feature-card" data-category="safety"><div class="icon">👑</div><h3>Principal approval</h3><p>The approval brain validates risky evolution: tool promotion, package installs, MCP activation, deployment, and merge.</p></article>
+        <div class="timeline detailed" aria-label="Execution steps">
+          <div><strong>1</strong><p><b>Receive</b><br />Webhook or chat event enters the platform adapter.</p></div>
+          <div><strong>2</strong><p><b>Normalize</b><br />Message shape becomes platform-independent.</p></div>
+          <div><strong>3</strong><p><b>Govern</b><br />Constitution determines allowed autonomy.</p></div>
+          <div><strong>4</strong><p><b>Plan</b><br />Brain roles create and challenge the work plan.</p></div>
+          <div><strong>5</strong><p><b>Execute</b><br />Sandbox handles risky file/tool/process actions.</p></div>
+          <div><strong>6</strong><p><b>Report</b><br />Audit and chat updates explain the result.</p></div>
         </div>
       </section>
 
       <section class="shell section" id="brains">
-        <div class="section-heading narrow">
-          <p class="eyebrow">7-brain architecture</p>
-          <h2>Every brain has a bounded responsibility.</h2>
-          <p>No brain is allowed to silently bypass Judicial Police, sandbox boundaries, audit logging, or Principal approval gates.</p>
+        <div class="section-heading wide">
+          <p class="eyebrow">03 / Seven-brain architecture</p>
+          <h2>Each brain has one job and one boundary</h2>
+          <p>The brains improve autonomy, but none of them bypass Judicial Police, AuditLog, SandboxRuntime, or Principal approval gates.</p>
         </div>
+
         <div class="brain-grid">
-          <article><strong>Planner</strong><p>Breaks the user goal into ordered steps, assumptions, risks, outputs, and approval checkpoints.</p></article>
-          <article><strong>Feasibility</strong><p>Checks missing files, permissions, dependencies, infrastructure limits, and implementation blockers.</p></article>
-          <article><strong>Ranker</strong><p>Scores clarity, safety, feasibility, rollback safety, token efficiency, and readiness.</p></article>
-          <article><strong>Teacher</strong><p>Discovers tools, packages, SDKs, CLIs, MCPs, and integration options.</p></article>
-          <article><strong>Cyber-Immune</strong><p>Reviews supply-chain risk, permissions, install behavior, and suspicious runtime activity.</p></article>
-          <article><strong>Red Team Mirror</strong><p>Adversarially reviews plans, commands, tool choices, model routing, and escalation paths.</p></article>
-          <article><strong>Principal / Auditor</strong><p>Approves risky evolution, memory promotion, tool trust, merge, deploy, and policy changes.</p></article>
+          <article><strong>Planner Brain</strong><p>Turns the user goal into ordered steps, assumptions, expected outputs, risk notes, rollback points, and approval checkpoints.</p><small>Boundary: cannot execute tools directly.</small></article>
+          <article><strong>Feasibility Brain</strong><p>Checks missing files, dependencies, permissions, infra limits, sandbox constraints, test availability, and implementation blockers.</p><small>Boundary: cannot silently approve risky work.</small></article>
+          <article><strong>Ranker Brain</strong><p>Scores clarity, safety, feasibility, rollback safety, token efficiency, confidence, and implementation readiness.</p><small>Boundary: cannot bypass thresholds.</small></article>
+          <article><strong>Teacher Brain</strong><p>Discovers packages, CLIs, SDKs, MCPs, examples, docs, GitHub repos, and integration options when the current toolset is insufficient.</p><small>Boundary: cannot install or trust tools.</small></article>
+          <article><strong>Cyber-Immune Brain</strong><p>Reviews supply-chain risk, install scripts, permissions, network behavior, suspicious prompts, dependency behavior, and unsafe execution paths.</p><small>Boundary: cannot promote tools alone.</small></article>
+          <article><strong>Red Team Mirror</strong><p>Adversarially reviews plans, commands, tool choices, model routing, escalation paths, and assumptions before sensitive actions.</p><small>Boundary: cannot execute changes.</small></article>
+          <article><strong>Principal / Auditor</strong><p>Final approval authority for risky evolution, tool promotion, memory promotion, env changes, deployment, merge, and policy changes.</p><small>Boundary: cannot disable Judicial Police.</small></article>
         </div>
       </section>
 
-      <section class="shell section flow-section" id="modes">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Constitutional modes</p>
-          <h2>Power changes by mode. Enforcement never disappears.</h2>
+      <section class="shell section" id="modes">
+        <div class="section-heading wide">
+          <p class="eyebrow">04 / Constitutional operating modes</p>
+          <h2>Autonomy changes by mode; enforcement does not</h2>
         </div>
         <div class="mode-grid">
-          <article class="mode-card"><span>Normal</span><h3>Plan-first mode</h3><p>For regular chat and /lisa plan. Low token budget, strict constraints, no autonomous execution by default.</p></article>
-          <article class="mode-card featured"><span>Autopilot</span><h3>Governed autonomy</h3><p>Brain swarm, token-bank routing, sandbox execution, tool discovery, patch planning, tests, and approval gates.</p></article>
-          <article class="mode-card"><span>Spike</span><h3>Safe exploration</h3><p>Research, compare models/tools, prototype in sandbox, and recommend paths without irreversible changes.</p></article>
-        </div>
-
-        <div class="timeline" aria-label="Lisa execution timeline">
-          <div><strong>01</strong><p>Message normalized from chat</p></div>
-          <div><strong>02</strong><p>Judicial Police selects constitution</p></div>
-          <div><strong>03</strong><p>Brains plan and critique</p></div>
-          <div><strong>04</strong><p>Token bank and model router decide</p></div>
-          <div><strong>05</strong><p>Sandbox executes approved work</p></div>
-          <div><strong>06</strong><p>Audit log and chat report sent</p></div>
+          <article class="mode-card"><span>Normal</span><h3>Plan-first mode</h3><p>Used for regular chat and /lisa plan. Low token budget, strict constraints, no autonomous workspace execution by default.</p><ul><li>Best for explanation and planning</li><li>Can inspect safe context</li><li>Requires escalation for risky actions</li></ul></article>
+          <article class="mode-card featured"><span>Autopilot</span><h3>Governed autonomy</h3><p>Explicit trigger only. Allows brain swarm, larger reasoning budget, sandboxed patch/test workflows, tool research, and approval-gated execution.</p><ul><li>Must report meaningful updates</li><li>Must stop at hard gates</li><li>Must preserve audit trail</li></ul></article>
+          <article class="mode-card"><span>Spike</span><h3>Safe exploration</h3><p>Research and prototype mode. Allows comparison, sandbox trials, and recommendations while blocking irreversible production actions.</p><ul><li>No merge or deploy</li><li>No secret access</li><li>No permanent trust promotion</li></ul></article>
         </div>
       </section>
 
-      <section class="shell section trust" id="trust">
+      <section class="shell section" id="runtime">
+        <div class="section-heading wide">
+          <p class="eyebrow">05 / Runtime and repository boundaries</p>
+          <h2>Where things live and what they are allowed to do</h2>
+        </div>
+
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr><th>Layer</th><th>Likely responsibility</th><th>Do not place here</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>site/</td><td>Public static developer/product overview: polished HTML, CSS, and tiny JS only.</td><td>Status dumps, generated reports, backend docs, temporary agent output.</td></tr>
+              <tr><td>docs/</td><td>Architecture notes, implementation maps, operating rules, brain responsibilities, deployment instructions.</td><td>Production runtime logic or public landing page rewrites.</td></tr>
+              <tr><td>backend/</td><td>Core orchestration, APIs, agents, services, repositories, config, persistence, and integrations.</td><td>Hardcoded secrets, static marketing content, bypasses around approvals.</td></tr>
+              <tr><td>tests/</td><td>Regression coverage for contracts, modes, routing, storage, auth, sandbox, and approval behavior.</td><td>Mock-only assertions that hide broken production paths.</td></tr>
+              <tr><td>reports/ or artifacts/</td><td>Generated reports, task outputs, closure notes, audit artifacts, and implementation summaries.</td><td>Files that overwrite site/ or source code without approval.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="runtime-grid">
+          <article><h3>SandboxRuntime</h3><p>Owns risky execution: commands, package trials, repo modifications, and tool validation. Local simulators must be clearly labeled as simulated isolation.</p></article>
+          <article><h3>ModelRouter</h3><p>Selects models by task type, context need, health, latency, fallback policy, JSON/tool support, and budget constraints.</p></article>
+          <article><h3>TokenBankBroker</h3><p>Reserves, consumes, releases, and audits model capacity so Autopilot does not burn tokens blindly.</p></article>
+          <article><h3>AuditLog</h3><p>Records mode selection, brain verdicts, approval decisions, file changes, tool choices, sandbox results, and final chat output.</p></article>
+        </div>
+      </section>
+
+      <section class="shell section" id="contracts">
+        <div class="section-heading wide">
+          <p class="eyebrow">06 / Developer contracts</p>
+          <h2>Rules future agents must preserve</h2>
+        </div>
+
+        <div class="contract-grid">
+          <article><h3>Notification contract</h3><p>Every meaningful environment/workspace update should explain the active brain, decision being made, changed file/tool/workspace, and next action.</p></article>
+          <article><h3>Approval contract</h3><p>Crucial updates require user validation before execution: merge, deploy, env, secret, DB write, policy change, tool trust, and sandbox escape risk.</p></article>
+          <article><h3>No hardcoding contract</h3><p>Models, provider fallback chains, severity thresholds, report limits, scanner behavior, and tunables belong in config/env/declarative settings.</p></article>
+          <article><h3>Site protection contract</h3><p>The site/ folder is a public-facing developer overview. Do not turn it into a status page again.</p></article>
+        </div>
+      </section>
+
+      <section class="shell section trust" id="guardrails">
         <div class="trust-copy">
-          <p class="eyebrow">Trust system</p>
-          <h2>Autopilot is powerful, not lawless.</h2>
-          <p>
-            Lisa can move fast only inside the active Constitution. Judicial Police can block, pause, stop,
-            quarantine, or escalate to Principal approval before risky work continues.
-          </p>
+          <p class="eyebrow">07 / Guardrails</p>
+          <h2>Professional autonomy without chaos</h2>
+          <p>Lisa should be aggressive about fixing broken layers, but conservative around irreversible actions. The correct behavior is inspect → plan → sandbox → test → report → ask approval when needed.</p>
         </div>
         <div class="trust-wall">
           <article>
@@ -210,7 +235,8 @@
               <li>Disabling Judicial Police, AuditLog, or SandboxRuntime</li>
               <li>Bypassing approval gates or sandbox boundaries</li>
               <li>Credential exfiltration or trusted-host secret access</li>
-              <li>Replacing the public site with generated status output</li>
+              <li>Replacing site/ with generated status output</li>
+              <li>Direct destructive commands without sandbox and approval</li>
             </ul>
           </article>
           <article>
@@ -218,7 +244,8 @@
             <ul>
               <li>Tool promotion from quarantine to trusted use</li>
               <li>Package, MCP, CLI, or Docker activation</li>
-              <li>Merge to main, deploy, env changes, or external messages</li>
+              <li>Merge to main, deployment, env changes, or external messages</li>
+              <li>Database writes, migrations, persistence changes, or secret usage</li>
               <li>Any future edit to the site/ public landing page</li>
             </ul>
           </article>
@@ -227,16 +254,16 @@
 
       <section class="shell cta-section">
         <div>
-          <p class="eyebrow">Brand promise</p>
-          <h2>Brains reason. Judicial Police enforces. Sandbox executes. Chat reports everything.</h2>
+          <p class="eyebrow">Developer promise</p>
+          <h2>Clear architecture. Safe autonomy. Mobile-readable docs. Desktop-grade detail.</h2>
         </div>
         <a class="button primary" href="#top">Back to top</a>
       </section>
     </main>
 
     <footer class="footer shell">
-      <p>Lisa — Governed Autopilot for chat-native autonomous work.</p>
-      <p class="muted">Designed for Telegram, Slack, WhatsApp, sandboxed execution, and constitutional control.</p>
+      <p>Lisa — Developer architecture overview for governed chat-native autonomous work.</p>
+      <p class="muted">Keep site/ polished. Put implementation reports in docs/ or reports/.</p>
     </footer>
 
     <script src="./script.js"></script>
