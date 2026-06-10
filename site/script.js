@@ -37,10 +37,11 @@ const commandInput = document.querySelector('#commandInput');
 const responseCard = document.querySelector('#responseCard');
 
 const responseTemplates = [
-  ['⚖️', 'Judicial Police', 'Autopilot Constitution selected; site/ remains protected from generated status-page replacement.'],
-  ['🧠', 'Planner + Feasibility', 'Repo map, blockers, safe patch order, and rollback checkpoints prepared.'],
-  ['🛡️', 'Red Team Mirror', 'Risk review completed before tool, dependency, merge, deploy, or environment changes.'],
-  ['📣', 'Chat report', 'Telegram update queued with active brain, changed files, current decision, and next action.'],
+  ['01', 'Normalize', 'Create a platform-independent task context from the chat command and start an audit span.'],
+  ['02', 'Govern', 'Judicial Police selects the active Constitution and blocks unsafe shortcuts before planning.'],
+  ['03', 'Plan', 'Planner, Feasibility, Ranker, Teacher, Cyber-Immune, and Red Team Mirror produce a safe execution plan.'],
+  ['04', 'Gate', 'Principal approval is required for merge, deploy, env changes, secrets, DB writes, and tool trust promotion.'],
+  ['05', 'Report', 'The notification layer explains active brain, decision, changed workspace, and next action in chat.'],
 ];
 
 if (simulateButton && commandInput && responseCard) {
@@ -50,13 +51,13 @@ if (simulateButton && commandInput && responseCard) {
 
     const commandLine = document.createElement('div');
     commandLine.className = 'response-line';
-    commandLine.innerHTML = `<span>💬</span><p><strong>Command:</strong> ${escapeHtml(userCommand)}</p>`;
+    commandLine.innerHTML = `<span>CMD</span><p><strong>Command:</strong> ${escapeHtml(userCommand)}</p>`;
     responseCard.appendChild(commandLine);
 
-    responseTemplates.forEach(([icon, title, text]) => {
+    responseTemplates.forEach(([step, title, text]) => {
       const line = document.createElement('div');
       line.className = 'response-line';
-      line.innerHTML = `<span>${icon}</span><p><strong>${title}:</strong> ${text}</p>`;
+      line.innerHTML = `<span>${step}</span><p><strong>${title}:</strong> ${text}</p>`;
       responseCard.appendChild(line);
     });
   });
